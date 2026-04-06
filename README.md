@@ -107,7 +107,7 @@ data-warehouse-project/
 Let's stay in touch! Feel free to connect with me on the following platforms:
 
 
-[![LinkedIn](https://www.linkedin.com/in/erwin-glenn-capitan-ii/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/erwin-glenn-capitan-ii/)
 
 
 
@@ -117,9 +117,13 @@ This project is licensed under the [MIT License](LICENSE). You are free to use, 
 
 ## 🌟 About Me
 
-Hi there! I'm **Erwin Glenn L. Capitan II**. I’m an IT professional and passionate Data Analyst on a mission to share knowledge and make working with data enjoyable and engaging!
+I turn data into actionable insights for better decision-making. I'm **Erwin Glenn L. Capitan II** — a Data Analyst skilled in SQL, Excel, Power BI, and Python.  
+
+I also apply data-driven thinking in financial markets, with a growing interest in quantitative finance.  
+
+🚀Focused on building real-world projects and delivering impact through data.
+
 
 Let's stay in touch! Feel free to connect with me on the following platforms:
 
-
-[![LinkedIn]([https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/baraa-khatib-salkini](https://www.linkedin.com/in/erwin-glenn-capitan-ii/))
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/erwin-glenn-capitan-ii/)
