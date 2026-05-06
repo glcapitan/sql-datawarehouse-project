@@ -6,6 +6,8 @@ This project delivers a SQL Server data warehouse that consolidates ERP and CRM 
 
 The goal is to transform raw business data into a reliable warehouse using a Bronze, Silver, and Gold architecture. The final Gold layer is modeled using fact and dimension tables, making the data easier to analyze for customer behavior, product performance, and sales trends.
 
+After building the warehouse, SQL analytics scripts were added to validate the final model and answer practical business questions using the Gold layer.
+
 ---
 
 ## Business Problem
@@ -14,7 +16,7 @@ Sales data is often stored across different systems, making it difficult for tea
 
 In this project, the source data comes from ERP and CRM CSV files. Before the data can be used for analysis, it needs to be loaded, cleaned, standardized, and organized into a proper data model.
 
-This data warehouse solves that problem by creating a single source of structured and reliable data for reporting.
+This data warehouse solves that problem by creating a single source of structured and reliable data for reporting and analysis.
 
 ---
 
@@ -34,7 +36,7 @@ Cleaned, standardized, and validated data
 Gold Layer
 Business-ready fact and dimension tables
       ↓
-Reporting and Analysis
+SQL Analytics
 Customer, product, and sales insights
 ```
 
@@ -51,6 +53,7 @@ The project uses a Medallion Architecture:
 | Bronze | Stores raw ERP and CRM data as loaded from the source files |
 | Silver | Cleans, standardizes, and prepares data for modeling |
 | Gold | Contains business-ready fact and dimension tables for reporting |
+| Analytics | Uses SQL queries to explore trends, rankings, segments, and business performance |
 
 ---
 
@@ -62,6 +65,7 @@ The project uses a Medallion Architecture:
 - Created business-ready fact and dimension tables in the Gold layer
 - Applied data quality checks to improve accuracy and consistency
 - Designed a star schema to support reporting and analysis
+- Added SQL analytics scripts for customer, product, sales, and performance analysis
 - Documented the data flow, data model, and naming conventions
 
 ---
@@ -76,8 +80,31 @@ The project uses a Medallion Architecture:
 | Architecture | Bronze, Silver, and Gold Layers |
 | Data Modeling | Star Schema, Fact and Dimension Tables |
 | Data Quality | Cleansing, Standardization, Validation |
+| Analytics | SQL-based exploration, segmentation, ranking, and performance analysis |
 | Documentation | Draw.io, Markdown |
 | Version Control | Git and GitHub |
+
+---
+
+## Data Warehouse Layers
+
+### Bronze Layer
+
+The Bronze layer stores the raw ERP and CRM data as received from the source files.
+
+This layer keeps the original data available for checking, troubleshooting, and validation before transformations are applied.
+
+### Silver Layer
+
+The Silver layer cleans and standardizes the raw data.
+
+This includes handling duplicates, fixing inconsistent values, standardizing formats, and preparing the data for business modeling.
+
+### Gold Layer
+
+The Gold layer contains the final business-ready tables.
+
+This layer is designed using fact and dimension tables so the data can be used for reporting, dashboard development, and SQL analysis.
 
 ---
 
@@ -96,6 +123,44 @@ This makes the warehouse easier to query and ready for reporting tools or SQL-ba
 
 ---
 
+## SQL Analytics
+
+After building the Gold layer, SQL analytics scripts were added to test the usability of the warehouse and answer business questions.
+
+The analytics scripts cover:
+
+- Database exploration
+- Dimension exploration
+- Date range analysis
+- Measures exploration
+- Magnitude analysis
+- Ranking analysis
+- Change-over-time analysis
+- Cumulative analysis
+- Performance analysis
+- Data segmentation
+- Part-to-whole analysis
+- Customer reporting
+- Product reporting
+
+These scripts show how the warehouse can support real business analysis after the data has been cleaned, modeled, and prepared for reporting.
+
+---
+
+## Business Questions Supported
+
+The warehouse and SQL analytics scripts are designed to support questions such as:
+
+- Which customers generate the most sales?
+- Which products are performing well or underperforming?
+- How are sales changing over time?
+- What customer patterns can be identified?
+- Which products contribute the most to total revenue?
+- How does performance change across different time periods?
+- Which customer or product segments need more attention?
+
+---
+
 ## Data Quality Checks
 
 Data quality checks were added to make sure the final reporting layer is reliable.
@@ -108,6 +173,8 @@ Examples of checks include:
 - Standardized value checks
 - Relationship checks between tables
 - Consistency checks between raw and transformed data
+
+These checks help improve trust in the final Gold layer before analysis is performed.
 
 ---
 
@@ -127,9 +194,24 @@ data-warehouse-project/
 │   ├── naming-conventions.md           # Naming standards for database objects
 │
 ├── scripts/                            # SQL scripts for warehouse development
+│   ├── setup/                          # Database and schema setup scripts
 │   ├── bronze/                         # Raw data loading scripts
 │   ├── silver/                         # Data cleaning and transformation scripts
-│   ├── gold/                           # Analytical model creation scripts
+│   ├── gold/                           # Business-ready fact and dimension tables
+│   └── analytics/                      # SQL analysis scripts using the Gold layer
+│       ├── 01_database_exploration.sql
+│       ├── 02_dimensions_exploration.sql
+│       ├── 03_date_range_exploration.sql
+│       ├── 04_measures_exploration.sql
+│       ├── 05_magnitude_analysis.sql
+│       ├── 06_ranking_analysis.sql
+│       ├── 07_change_over_time_analysis.sql
+│       ├── 08_cumulative_analysis.sql
+│       ├── 09_performance_analysis.sql
+│       ├── 10_data_segmentation.sql
+│       ├── 11_part_to_whole_analysis.sql
+│       ├── 12_report_customers.sql
+│       └── 13_report_products.sql
 │
 ├── tests/                              # Data quality and validation checks
 │
@@ -138,18 +220,6 @@ data-warehouse-project/
 ├── .gitignore                          # Git ignore rules
 └── requirements.txt                    # Project requirements and dependencies
 ```
-
----
-
-## Business Questions Supported
-
-The warehouse is designed to support analysis such as:
-
-- Which customers generate the most sales?
-- Which products are performing well or underperforming?
-- How are sales changing over time?
-- What customer patterns can be identified?
-- Which business areas need more attention?
 
 ---
 
@@ -163,6 +233,7 @@ Key outcomes:
 - Improved data quality through cleaning and standardization
 - Created a clear Bronze, Silver, and Gold data flow
 - Built a star schema for reporting
+- Added SQL analytics scripts to answer business questions
 - Prepared the data for customer, product, and sales analysis
 - Documented the solution for technical and business users
 
